@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { api } from "@/services";
-import { Form, Input } from '@rocketseat/unform';
+import { Form } from "@unform/web";
+import { Input } from "@/components/Input";
 
 type AddressProps = {
   logradouro: string,
@@ -40,9 +41,6 @@ const Dashboard: React.FC = () => {
             <Input
               type="number"
               name="cep"
-              id="cep"
-              className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              placeholder="CEP"
             />
           </div>
           <button
